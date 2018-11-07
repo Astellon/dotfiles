@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 18,
+    fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: '"Fira Mono", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Roboto Mono"',//, Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -131,7 +131,9 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-darkwater'],
+  plugins: ['hyper-darkwater',
+            'hyper-statusline',
+            'hyper-tab-icons-plus'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
