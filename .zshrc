@@ -11,13 +11,6 @@ zplug "plugins/git", from:oh-my-zsh
 zplug "mafredri/zsh-async"
 zplug "sindresorhus/pure"
 
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
 zplug load
 
 autoload -Uz compinit && compinit
@@ -67,6 +60,7 @@ setopt autol_ist
 setopt auto_cd
 setopt auto_menu
 setopt auto_pushd
+setopt complete_in_word  
 setopt nobeep 
 setopt pushd_ignore_dups
 
@@ -88,4 +82,5 @@ alias gt='git'
 alias gti='git'
 alias gs='git status'
 alias ga='git add .'
+alias gdj='git diff --color-words=$'\''[^\x80-\xbf][\x80-\xbf]*'\'''
 alias cat='bat'
