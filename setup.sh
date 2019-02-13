@@ -1,4 +1,4 @@
-DOT_FILES=( .zshrc .hyper.js )
+DOT_FILES=( .zshrc .hyper.js .zshenv )
 
 for file in ${DOT_FILES[@]}
 do
