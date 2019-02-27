@@ -1,25 +1,31 @@
-# zplug
-if [[ ! -d ~/.zplug ]];then
-  git clone https://github.com/zplug/zplug ~/.zplug
-fi
+# terminal
+TERM=xterm
 
+# zplug
 source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-completions"
 zplug "plugins/git", from:oh-my-zsh
-zplug "mafredri/zsh-async"
-zplug "sindresorhus/pure"
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+
+# install plugins
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
 
 zplug load
 
 autoload -Uz compinit && compinit
 autoload -Uz colors && colors
 
-#plugin "pure"
-autoload -U promptinit && promptinit
+# plugin "pure"
+autoload -U promptinit; promptinit
 prompt pure
-
 
 # setting for hyper-tab-icons-plus (https://github.com/zeit/hyper/issues/1188)
 

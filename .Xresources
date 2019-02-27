@@ -1,0 +1,53 @@
+! special
+*.foreground:   #b8b8b8
+*.background:   #202020
+*.cursorColor:  #b8b8b8
+
+! black
+*.color0:       #2d2d2d
+*.color8:       #969696
+
+! red
+*.color1:       #d66262
+*.color9:       #cc6666
+
+! green
+*.color2:       #45cf75
+*.color10:      #68bd84
+
+! yellow
+*.color3:       #d39064
+*.color11:      #f0c674
+
+! blue
+*.color4:       #52a7c3
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #a968bd
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #53c6a7
+*.color14:      #8abeb7
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
+
+!urxvt
+
+URxvt*scrollBar: false
+URxvt.font: xft:Hack:size=6, xft:Noto Mono:size=6
+URxvt.letterSpace: -1
+URxvt.visualBell:true
+URxvt.fading: 40
+
+rofi.theme: Pop-Dark
+rofi.font: Hack 16
+
+rofi.color-enabled: true
+rofi.color-window: #2f343f, #2f343f, #2f343f
+rofi.color-normal: #2f343f, #d8dee8, #2f343f, #2f343f, #bf616a
+rofi.color-active: #2f343f, #b48ead, #2f343f, #2f343f, #93e5cc
+rofi.color-urgent: #1f343f, #ebcb8b, #2f343f, #2f343f, #ebcb8b   
