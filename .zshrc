@@ -82,8 +82,21 @@ alias -g T='| tail'
 alias -g S='| sed'
 alias -g C='| cat'
 
-alias l='ls -la --color'
-alias ls='ls --color'
+#alias l='ls -la --color'
+#alias ls='ls --color'
+
+# for Mac
+case ${OSTYPE} in
+  darwin*)
+    alias l='ls -la -G'
+    alias ls='ls -G'
+    ;;
+  linux*)
+    alias l='ls -la --color'
+    alias ls='ls --color'
+    ;;
+esac
+
 alias gt='git'
 alias gti='git'
 alias gs='git status'
