@@ -84,9 +84,6 @@ alias -g T='| tail'
 alias -g S='| sed'
 alias -g C='| cat'
 
-#alias l='ls -la --color'
-#alias ls='ls --color'
-
 # for Mac
 case ${OSTYPE} in
   darwin*)
