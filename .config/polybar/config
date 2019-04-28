@@ -19,9 +19,9 @@
 ; and edited by astellon
 
 [colors]
-background = ${xrdb:background:#222}
+background = ${xrdb:color12:#dfdfdf}
 background-alt = #444
-foreground = ${xrdb:foreground:#dfdfdf}
+foreground = ${xrdb:color0:#dfdfdf}
 foreground-alt = #555
 primary = ${xrdb:color4:#5f819d}
 secondary = ${xrdb:color5:#85678f}

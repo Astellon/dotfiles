@@ -44,11 +44,28 @@ URxvt.letterSpace: -1
 URxvt.visualBell:true
 URxvt.fading: 40
 
-rofi.theme: Pop-Dark
-rofi.font: Hack 16
+!color
+URxvt.depth: 32
+URxvt.background: [90]#202020
+
+rofi.font: Noto Sans 16
 
 rofi.color-enabled: true
-rofi.color-window: #2f343f, #2f343f, #2f343f
-rofi.color-normal: #2f343f, #d8dee8, #2f343f, #2f343f, #bf616a
-rofi.color-active: #2f343f, #b48ead, #2f343f, #2f343f, #93e5cc
-rofi.color-urgent: #1f343f, #ebcb8b, #2f343f, #2f343f, #ebcb8b   
+
+! Window:           'background',  'border', 'separator'
+rofi.color-window: argb:cc202020,  #9575cd, argb:ffffffff
+
+!   State:              'bg',       'fg',   'altbg',        'hlbg',         hlfg
+rofi.color-normal: argb:00252936, #d5d5d5, argb:00252936, argb:003da4cc, #ff3da4cc
+rofi.color-active: argb:00252936, #252936, argb:00252936, argb:003da4cc, #ffc000
+rofi.color-urgent: argb:00252936, #ff0000, argb:00252936, argb:00252936, #ff0000
+
+rofi.width: 100
+rofi.padding: 500
+rofi.line-margin: 15
+rofi.lines: 8
+rofi.separator-style: solid
+rofi.columns: 1
+rofi.bw: 0
+rofi.eh: 1
+rofi.hide-scrollbar: true

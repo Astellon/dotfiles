@@ -180,6 +180,8 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id fcitx
+exec --no-startup-id compton -CGbm 0.75 --config $HOME/.config/compton/.compton.config
+exec --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.png
 
 ### for i3-gaps ###
 gaps inner 10
