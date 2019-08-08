@@ -35,20 +35,20 @@ endif
 
 " ========== dein.vim ==========
 
-set runtimepath+=/home/astellon/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$HOME/.cache/dein/repos/github.com/Shougo/dein.vim
 
-if dein#load_state('/home/astellon/.cache/dein')
-  call dein#begin('/home/astellon/.cache/dein')
+if dein#load_state('$HOME/.cache/dein')
+  call dein#begin('$HOME/.cache/dein')
 
   " Let dein manage dein
-  call dein#add('/home/astellon/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
 
-  call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
-  "call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
+  call dein#load_toml('$HOME/.config/nvim/dein.toml', {'lazy': 0})
+  "call dein#load_toml('$HOME/.config/nvim/dein_lazy.toml', {'lazy': 1})
 
   call dein#end()
   call dein#save_state()
