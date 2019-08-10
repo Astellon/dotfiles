@@ -29,6 +29,8 @@ autoload -Uz colors && colors
 autoload -U promptinit; promptinit
 prompt pure
 
+PURE_PROMPT_SYMBOL='>>>'
+
 # setting for hyper-tab-icons-plus (https://github.com/zeit/hyper/issues/1188)
 
 # Override auto-title when static titles are desired ($ title My new title)
