@@ -19,11 +19,11 @@
 ; and edited by astellon
 
 [colors]
-background = ${xrdb:color12:#dfdfdf}
+background = ${xrdb:color0:#dfdfdf}
 background-alt = #444
-foreground = ${xrdb:color0:#dfdfdf}
+foreground = ${xrdb:color15:#dfdfdf}
 foreground-alt = #555
-primary = ${xrdb:color4:#5f819d}
+primary = ${xrdb:color9:#5f819d}
 secondary = ${xrdb:color5:#85678f}
 alert = #bd2c40
 
@@ -31,7 +31,7 @@ alert = #bd2c40
 
 ; position
 width = 100%
-height = 25
+height = 50
 offset-x = 0%
 offset-y = 0%
 radius = 0.0
@@ -46,18 +46,14 @@ line-color = #f00
 
 border-size = 10
 padding-right = 2
-module-margin = 1
+module-margin = 2
 
-
-font-0 = hack:pixelsize=11;2
-font-1 = unifont:fontformat=truetype:pixelsize=10:antialias=false;2
-font-2 = FontAwesome:scale=11;3
-font-3 = octicons:scale=11;3
-font-4 = emoji:scale=11
+font-0 = "Fira Code:pixelsize=16;1"
+font-1 = "FontAwesome:pixelsize=16:antialias=false;0"
 
 modules-left = i3
 modules-center = date
-modules-right = alsa xbacklight cpu memory wireless-network battery shutdown
+modules-right = alsa xbacklight cpu temperature memory wireless-network battery shutdown
 
 tray-position = right
 tray-padding = 10
@@ -152,7 +148,8 @@ bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/xbacklight]
-type = internal/xbacklight
+type = internal/backlight
+
 card = intel_backlight
 
 format = <label> <bar>
@@ -172,6 +169,13 @@ bar-empty-foreground = ${colors.foreground-alt}
 [module/cpu]
 type = internal/cpu
 label = CPU %percentage%%
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+warn-temperature = 70
 
 [module/memory]
 type = internal/memory

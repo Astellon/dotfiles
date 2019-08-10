@@ -39,7 +39,7 @@
 !urxvt
 
 URxvt*scrollBar: false
-URxvt.font: xft:Hack:size=6, xft:Noto Mono:size=6
+URxvt.font: xft:Fira Code:size=6, xft:Noto Mono:size=6
 URxvt.letterSpace: -1
 URxvt.visualBell:true
 URxvt.fading: 40
@@ -48,7 +48,7 @@ URxvt.fading: 40
 URxvt.depth: 32
 URxvt.background: [90]#202020
 
-rofi.font: Noto Sans 16
+rofi.font: Noto Sans 18
 
 rofi.color-enabled: true
 

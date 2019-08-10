@@ -20,7 +20,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start rofi (launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -fullscreen -show run
 
 # change focus
 bindsym $mod+j focus left
@@ -161,7 +161,7 @@ set_from_resource $fg      i3wm.foreground #000000
 set_from_resource $bg      i3wm.background #000000
 set_from_resource $black   i3wm.color0     #000000
 set_from_resource $white   i3wm.color7     #000000
-set_from_resource $red     i3wm.color1     #000000
+set_from_resource $red     i3wm.color9     #000000
 set_from_resource $green   i3wm.color2     #000000
 set_from_resource $yellow  i3wm.color3     #000000
 set_from_resource $blue    i3wm.color4     #000000
@@ -170,9 +170,10 @@ set_from_resource $cyan    i3wm.color6     #000000
 
 
 #class                   border     backgr.    text       indicator  child_boder
-client.focused           $bg        $blue      $fg        $bg        $bg
+client.focused           $bg        $red       $fg        $bg        $red
 client.focused_inactive  $bg        $bg        $fg        $bg        $bg
 client.unfocused         $bg        $bg        $fg        $bg        $bg
+client.background        $red
 
 ### start up applications ###
 
@@ -180,9 +181,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id dunst
 exec --no-startup-id fcitx
-exec --no-startup-id compton -CGbm 0.75 --config $HOME/.config/compton/.compton.config
-exec --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.png
+exec --no-startup-id compton -CGbm 0.75 --config $HOME/.config/compton/compton.conf
+exec --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
 
 ### for i3-gaps ###
-gaps inner 10
+for_window [class="^.*"] border pixel 2
+gaps inner 8
 gaps outer -5
