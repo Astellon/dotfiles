@@ -10,7 +10,7 @@ zplug "zsh-users/zsh-completions"
 zplug "plugins/git", from:oh-my-zsh
 zplug "supercrabtree/k"
 zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
 # install plugins
 if ! zplug check --verbose; then
@@ -25,11 +25,8 @@ zplug load
 autoload -Uz compinit && compinit
 autoload -Uz colors && colors
 
-# plugin "pure"
 autoload -U promptinit; promptinit
-prompt pure
-
-PURE_PROMPT_SYMBOL='>>>'
+prompt spaceship
 
 # setting for hyper-tab-icons-plus (https://github.com/zeit/hyper/issues/1188)
 
