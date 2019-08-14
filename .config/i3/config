@@ -183,6 +183,10 @@ exec --no-startup-id dunst
 exec --no-startup-id fcitx
 exec --no-startup-id compton -CGbm 0.75 --config $HOME/.config/compton/compton.conf
 exec --no-startup-id feh --bg-scale $HOME/.config/i3/wallpaper.jpg
+exec --no-startup-id xss-lock -- i3lock \
+--image $HOME/.config/i3/sleep.png \
+--clock \
+--blur 5
 
 ### for i3-gaps ###
 for_window [class="^.*"] border pixel 2
