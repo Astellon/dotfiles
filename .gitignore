@@ -6,3 +6,7 @@
 !.config/nvim
 !.config/polybar
 !.config/ranger
+
+*.jpg
+*.jpeg
+*.png
