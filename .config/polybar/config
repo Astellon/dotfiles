@@ -19,15 +19,19 @@
 ; and edited by astellon
 
 [colors]
-background = ${xrdb:color0:#dfdfdf}
+background = ${xrdb:background:#dfdfdf}
 background-alt = #444
-foreground = ${xrdb:color15:#dfdfdf}
+foreground = ${xrdb:foreground:#dfdfdf}
 foreground-alt = #555
-primary = ${xrdb:color9:#5f819d}
-secondary = ${xrdb:color5:#85678f}
-alert = #bd2c40
+primary = ${xrdb:color1:#5f819d}
+secondary = ${xrdb:color6:#85678f}
+alert = ${xrdb:color1:#c23a4e}
 
 [bar/astellon]
+
+; monitor
+monitor = ${env:MONITOR:eDP-1}
+monitor-fallback = eDP-1
 
 ; position
 width = 100%
@@ -42,6 +46,7 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 2
+underline-size = 6
 line-color = #f00
 
 border-size = 10
