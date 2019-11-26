@@ -169,11 +169,11 @@ set_from_resource $magenta i3wm.color5     #000000
 set_from_resource $cyan    i3wm.color6     #000000
 
 
-#class                   border     backgr.    text       indicator  child_boder
-client.focused           $bg        $red       $fg        $bg        $red
+#class                   border     backgr.    text       indicator  child_border
+client.focused           $bg        $bg        $fg        $bg        $red
 client.focused_inactive  $bg        $bg        $fg        $bg        $bg
 client.unfocused         $bg        $bg        $fg        $bg        $bg
-client.background        $red
+client.background        $bg
 
 ### start up applications ###
 
